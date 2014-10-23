@@ -7,7 +7,7 @@ return [
                     'privileges' => [
                         'allow' => [
                             'controllers' => [
-
+                                'UthandoTestimonial\Controller\Testimonial' => ['action' => ['view']],
                             ],
                         ],
                     ],
@@ -16,14 +16,14 @@ return [
                     'privileges' => [
                         'allow' => [
                             'controllers' => [
-
+                                'UthandoTestimonial\Controller\Testimonial' => ['action' => 'all'],
                             ],
                         ],
                     ],
                 ],
             ],
             'resources' => [
-
+                'UthandoTestimonial\Controller\Testimonial',
             ],
         ],
     ],

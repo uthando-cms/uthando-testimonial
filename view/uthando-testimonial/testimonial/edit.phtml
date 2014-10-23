@@ -1,0 +1,7 @@
+<?php $this->headTitle('Edit Testimonial') ?>
+
+<?=$this->partial('uthando-testimonial/testimonial/testimonial-form', [
+    'form' => $this->form,
+    'formAction' => 'edit',
+    'testimonialId' => $this->model->getTestimonialId()
+]); ?>

@@ -1,0 +1,26 @@
+
+<?=$this->partial('uthando-admin/partial/search', [
+    'name'			=> 'testimonial',
+    'searchInputs'	=> [
+        'Company' => 'company',
+    ],
+]);?>
+
+<div id="table-testimonial">
+    <?=$this->partial('uthando-testimonial/testimonial/list', [
+        'models' => $this->models
+    ]); ?>
+</div>
+
+
+<script>
+$(document).ready(function(){
+    $('#table-testimonial').dataGrid({
+        url : 'testimonial/list',
+        query: { sort : 'testimonialId' },
+        searchForm : $('#search-testimonial'),
+        paging : 'links',
+        columnSort: true
+    });
+});
+</script>
