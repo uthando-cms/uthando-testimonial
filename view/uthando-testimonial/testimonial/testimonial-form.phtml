@@ -90,9 +90,8 @@ if (isset($this->testimonialId)) $routeArray['id'] = $this->testimonialId;
                     </div>
                 </fieldset>
            	</div>
-        
-        <div class="row">
-                <div class="col-md-12">
+
+            <div class="col-md-6">
                 <fieldset>
                     <legend>HTML Content</legend>
                     <?=$this->formElement($form->get('text')->setAttribute('class', 'form-control')); ?>
@@ -123,6 +122,7 @@ if (isset($this->testimonialId)) $routeArray['id'] = $this->testimonialId;
 <script type="text/javascript">
     $(document).ready(function () {
         $('#testimonial-content-textarea').liveEdit({
+            height: '325px',
             css: [
                 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css',
                 'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css',
