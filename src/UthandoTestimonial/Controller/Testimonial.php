@@ -5,7 +5,7 @@ use UthandoCommon\Controller\AbstractCrudController;
 
 class Testimonial extends AbstractCrudController
 {
-    protected $searchDefaultParams = array('sort' => 'testimonialId');
+    protected $controllerSearchOverrides = array('sort' => 'testimonialId');
     protected $serviceName = 'UthandoTestimonial\Service\Testimonial';
     protected $route = 'admin/testimonial';
 
