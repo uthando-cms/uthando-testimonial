@@ -1,4 +1,13 @@
 <?php
+/**
+ * Uthando CMS (http://www.shaunfreeman.co.uk/)
+ *
+ * @package   UthandoTestimonial\Model
+ * @author    Shaun Freeman <shaun@shaunfreeman.co.uk>
+ * @link      https://github.com/uthando-cms for the canonical source repository
+ * @copyright Copyright (c) 2015 Shaun Freeman. (http://www.shaunfreeman.co.uk)
+ * @license   see LICENSE
+ */
 
 namespace UthandoTestimonial\Model;
 
@@ -7,6 +16,11 @@ use UthandoCommon\Model\DateModifiedTrait;
 use UthandoCommon\Model\Model;
 use UthandoCommon\Model\ModelInterface;
 
+/**
+ * Class Testimonial
+ *
+ * @package UthandoTestimonial\Model
+ */
 class Testimonial implements ModelInterface
 {
     use Model,
