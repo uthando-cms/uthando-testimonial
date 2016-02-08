@@ -5,6 +5,9 @@ return [
         'admin' => [
             'testimonial' => [
                 'label' => 'Testimonials',
+                'params' => [
+                    'icon' => 'fa-comment',
+                ],
                 'pages' => [
                     'list' => [
                         'label'     => 'List All Testimonials',
