@@ -10,20 +10,29 @@ return [
                 ],
                 'pages' => [
                     'list' => [
-                        'label'     => 'List All Testimonials',
-                        'action'    => 'list',
+                        'label'     => 'List Testimonials',
+                        'action'    => 'index',
                         'route'     => 'admin/testimonial',
-                        'resource'  => 'menu:user'
+                        'resource'  => 'menu:admin',
+                        'visible'   => false,
                     ],
                     'add' => [
-                        'label'     => 'Add New Testimonial',
+                        'label'     => 'Add Testimonial',
                         'action'    => 'add',
                         'route'     => 'admin/testimonial/edit',
-                        'resource'  => 'menu:user'
+                        'resource'  => 'menu:admin',
+                        'visible'   => false,
+                    ],
+                    'edit' => [
+                        'label'     => 'Edit Testimonial',
+                        'action'    => 'edit',
+                        'route'     => 'admin/testimonial/edit',
+                        'resource'  => 'menu:admin',
+                        'visible'   => false,
                     ],
                 ],
                 'route' => 'admin/testimonial',
-                'resource' => 'menu:user'
+                'resource' => 'menu:admin'
             ],
         ],
     ],

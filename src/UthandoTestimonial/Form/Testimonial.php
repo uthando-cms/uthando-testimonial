@@ -11,6 +11,8 @@
 
 namespace UthandoTestimonial\Form;
 
+use TwbBundle\Form\View\Helper\TwbBundleForm;
+use Zend\Form\Element\Button;
 use Zend\Form\Form;
 
 /**
@@ -23,15 +25,18 @@ class Testimonial extends Form
     public function init()
     {
         $this->add([
-            'name' => 'testimonialId',
-            'type' => 'hidden',
-        ]);
-
-        $this->add([
             'name' => 'name',
             'type' => 'text',
             'options' => [
-                'label' => 'Name:',
+                'label' => 'Name',
+                'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,
+                'column-size' => 'sm-10',
+                'label_attributes' => [
+                    'class' => 'col-sm-2',
+                ],
+            ],
+            'attributes' => [
+                'placeholder' => 'Name',
             ],
         ]);
 
@@ -39,7 +44,18 @@ class Testimonial extends Form
             'name' => 'image',
             'type' => 'text',
             'options' => [
-                'label' => 'Image:',
+                'label' => 'Image',
+                'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,
+                'column-size' => 'sm-10',
+                'label_attributes' => [
+                    'class' => 'col-sm-2',
+                ],
+                'add-on-append' => new Button('testimonial-image-button', [
+                    'label' => 'Add Image',
+                ]),
+            ],
+            'attributes' => [
+                'placeholder' => 'Image',
             ],
         ]);
 
@@ -47,7 +63,15 @@ class Testimonial extends Form
             'name' => 'location',
             'type' => 'text',
             'options' => [
-                'label' => 'Location:',
+                'label' => 'Location',
+                'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,
+                'column-size' => 'sm-10',
+                'label_attributes' => [
+                    'class' => 'col-sm-2',
+                ],
+            ],
+            'attributes' => [
+                'placeholder' => 'Location',
             ],
         ]);
 
@@ -55,7 +79,15 @@ class Testimonial extends Form
             'name' => 'company',
             'type' => 'text',
             'options' => [
-                'label' => 'Company:',
+                'label' => 'Company',
+                'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,
+                'column-size' => 'sm-10',
+                'label_attributes' => [
+                    'class' => 'col-sm-2',
+                ],
+            ],
+            'attributes' => [
+                'placeholder' => 'Company',
             ],
         ]);
 
@@ -63,7 +95,15 @@ class Testimonial extends Form
             'name' => 'website',
             'type' => 'text',
             'options' => [
-                'label' => 'Website:',
+                'label' => 'Website',
+                'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,
+                'column-size' => 'sm-10',
+                'label_attributes' => [
+                    'class' => 'col-sm-2',
+                ],
+            ],
+            'attributes' => [
+                'placeholder' => 'Website',
             ],
         ]);
 
@@ -71,7 +111,15 @@ class Testimonial extends Form
             'name' => 'sector',
             'type' => 'text',
             'options' => [
-                'label' => 'Sector:',
+                'label' => 'Sector',
+                'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,
+                'column-size' => 'sm-10',
+                'label_attributes' => [
+                    'class' => 'col-sm-2',
+                ],
+            ],
+            'attributes' => [
+                'placeholder' => 'Sector',
             ],
         ]);
 
@@ -79,11 +127,29 @@ class Testimonial extends Form
             'name' => 'text',
             'type' => 'textarea',
             'options' => [
-                'label' => 'Text:',
+                'label' => 'HTML',
+                'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,
+                'column-size' => 'sm-10',
+                'label_attributes' => [
+                    'class' => 'col-sm-2',
+                ],
             ],
             'attributes' => [
-                'id' => 'testimonial-content-textarea',
+                'placeholder' => 'HTML Content',
+                'class'       => 'editable-textarea',
+                'id'          => 'testimonial-content-textarea',
+                'rows'        => 25,
             ]
+        ]);
+
+        $this->add([
+            'name' => 'testimonialId',
+            'type' => 'hidden',
+        ]);
+
+        $this->add([
+            'name' => 'security',
+            'type' => 'csrf',
         ]);
     }
 }
