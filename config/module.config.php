@@ -51,7 +51,6 @@ return [
                         '__NAMESPACE__' => 'UthandoTestimonial\Controller',
                         'controller'    => 'Testimonial',
                         'action'        => 'view',
-                        'force-ssl'     => 'http'
                     ],
                 ],
             ],
