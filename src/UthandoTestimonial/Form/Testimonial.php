@@ -56,6 +56,7 @@ class Testimonial extends Form
             ],
             'attributes' => [
                 'placeholder' => 'Image',
+                'id' => 'testimonial-image',
             ],
         ]);
 
