@@ -29,15 +29,17 @@
     </div>
 </div>
 
-
+<?php $this->placeholder('js-scripts')->captureStart();?>
 <script>
-$(document).ready(function(){
-    $('#table-testimonial').dataGrid({
-        url : 'testimonial/list',
-        query: { sort : 'testimonialId' },
-        searchForm : $('#search-testimonial'),
-        paging : 'links',
-        columnSort: true
+    $(document).ready(function(){
+        $('#table-testimonial').dataGrid({
+            url : 'testimonial/list',
+            query: { sort : 'testimonialId' },
+            searchForm : $('#search-testimonial'),
+            paging : 'links',
+            columnSort: true
+        });
     });
-});
 </script>
+<?php $this->placeholder('js-scripts')->captureEnd();?>
+
