@@ -18,7 +18,7 @@ use UthandoCommon\Mapper\AbstractDbMapper;
  *
  * @package UthandoTestimonial\Mapper
  */
-class Testimonial extends AbstractDbMapper
+class TestimonialMapper extends AbstractDbMapper
 {
     protected $table = 'testimonial';
     protected $primary = 'testimonialId';

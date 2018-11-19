@@ -1,38 +1,17 @@
 <?php
+
+use UthandoTestimonial\Controller\TestimonialController;
+use UthandoTestimonial\Service\TestimonialService;
+
 return [
     'controllers' => [
         'invokables' => [
-            'UthandoTestimonial\Controller\Testimonial' => 'UthandoTestimonial\Controller\Testimonial',
+            TestimonialController::class => TestimonialController::class
         ],
-    ],
-    'form_elements' => [
-        'invokables' => [
-            'UthandoTestimonial' => 'UthandoTestimonial\Form\Testimonial',
-        ],
-    ],
-    'hydrators' => [
-        'invokables' => [
-            'UthandoTestimonial' => 'UthandoTestimonial\Hydrator\Testimonial',
-        ]
-    ],
-    'input_filters' => [
-        'invokables' => [
-            'UthandoTestimonial' => 'UthandoTestimonial\InputFilter\Testimonial',
-        ],
-    ],
-    'uthando_mappers' => [
-        'invokables' => [
-            'UthandoTestimonial' => 'UthandoTestimonial\Mapper\Testimonial',
-        ],
-    ],
-    'uthando_models' => [
-        'invokables' => [
-            'UthandoTestimonial' => 'UthandoTestimonial\Model\Testimonial',
-        ]
     ],
     'uthando_services' => [
         'invokables' => [
-            'UthandoTestimonial' => 'UthandoTestimonial\Service\Testimonial',
+            TestimonialService::class => TestimonialService::class,
         ],
     ],
     'view_manager' => [
@@ -49,7 +28,7 @@ return [
                     ],
                     'defaults' => [
                         '__NAMESPACE__' => 'UthandoTestimonial\Controller',
-                        'controller'    => 'Testimonial',
+                        'controller'    => TestimonialController::class,
                         'action'        => 'view',
                     ],
                 ],

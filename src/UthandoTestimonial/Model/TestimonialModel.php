@@ -21,7 +21,7 @@ use UthandoCommon\Model\ModelInterface;
  *
  * @package UthandoTestimonial\Model
  */
-class Testimonial implements ModelInterface
+class TestimonialModel implements ModelInterface
 {
     use Model,
         DateCreatedTrait,

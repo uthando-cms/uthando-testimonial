@@ -19,7 +19,7 @@ use UthandoCommon\Hydrator\Strategy\DateTime as DateTimeStrategy;
  *
  * @package UthandoTestimonial\Hydrator
  */
-class Testimonial extends AbstractHydrator
+class TestimonialHydrator extends AbstractHydrator
 {
     public function __construct()
     {
@@ -35,7 +35,7 @@ class Testimonial extends AbstractHydrator
 
     /**
      *
-     * @param $object \UthandoTestimonial\Model\Testimonial
+     * @param $object \UthandoTestimonial\Model\TestimonialModel
      * @return array
      */
     public function extract($object)

@@ -12,16 +12,17 @@
 namespace UthandoTestimonial\Controller;
 
 use UthandoCommon\Controller\AbstractCrudController;
+use UthandoTestimonial\Service\TestimonialService;
 
 /**
  * Class Testimonial
  *
  * @package UthandoTestimonial\Controller
  */
-class Testimonial extends AbstractCrudController
+class TestimonialController extends AbstractCrudController
 {
     protected $controllerSearchOverrides = array('sort' => 'testimonialId');
-    protected $serviceName = 'UthandoTestimonial';
+    protected $serviceName = TestimonialService::class;
     protected $route = 'admin/testimonial';
 
     public function viewAction()

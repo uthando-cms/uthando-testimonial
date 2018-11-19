@@ -11,14 +11,19 @@
 
 namespace UthandoTestimonial\InputFilter;
 
+use UthandoCommon\Filter\Ucwords;
+use Zend\Filter\Digits;
+use Zend\Filter\StringTrim;
+use Zend\Filter\StripTags;
 use Zend\InputFilter\InputFilter;
+use Zend\Validator\StringLength;
 
 /**
  * Class Testimonial
  *
  * @package UthandoTestimonial\InputFilter
  */
-class Testimonial extends InputFilter
+class TestimonialInputFilter extends InputFilter
 {
     public function init()
     {
@@ -26,9 +31,9 @@ class Testimonial extends InputFilter
             'name' => 'testimonialId',
             'required' => false,
             'filters' => [
-                ['name' => 'StringTrim'],
-                ['name' => 'StripTags'],
-                ['name' => 'Digits']
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
+                ['name' => Digits::class]
             ],
         ]);
 
@@ -36,12 +41,12 @@ class Testimonial extends InputFilter
             'name' => 'name',
             'required'      => true,
             'filters'       => [
-                ['name' => 'StripTags'],
-                ['name' => 'StringTrim'],
-                ['name' => 'UthandoCommon\Filter\Ucwords'],
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
+                ['name' => Ucwords::class],
             ],
             'validators'    => [
-                ['name' => 'StringLength', 'options' => [
+                ['name' => StringLength::class, 'options' => [
                     'encoding' => 'UTF-8',
                     'min' => 2,
                     'max' => 255
@@ -53,11 +58,11 @@ class Testimonial extends InputFilter
             'name' => 'image',
             'required' => false,
             'filters' => [
-                ['name' => 'StringTrim'],
-                ['name' => 'StripTags'],
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
             ],
             'validators' => [
-                ['name'    => 'StringLength','options' => [
+                ['name'    => StringLength::class,'options' => [
                     'encoding' => 'UTF-8',
                     'max'      => 255,
                 ]],
@@ -68,11 +73,11 @@ class Testimonial extends InputFilter
             'name' => 'location',
             'required' => false,
             'filters' => [
-                ['name' => 'StringTrim'],
-                ['name' => 'StripTags'],
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
             ],
             'validators' => [
-                ['name'    => 'StringLength','options' => [
+                ['name'    => StringLength::class,'options' => [
                     'encoding' => 'UTF-8',
                     'max'      => 255,
                 ]],
@@ -83,11 +88,11 @@ class Testimonial extends InputFilter
             'name' => 'company',
             'required' => false,
             'filters' => [
-                ['name' => 'StringTrim'],
-                ['name' => 'StripTags'],
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
             ],
             'validators' => [
-                ['name'    => 'StringLength','options' => [
+                ['name'    => StringLength::class,'options' => [
                     'encoding' => 'UTF-8',
                     'max'      => 255,
                 ]],
@@ -98,11 +103,11 @@ class Testimonial extends InputFilter
             'name' => 'website',
             'required' => false,
             'filters' => [
-                ['name' => 'StringTrim'],
-                ['name' => 'StripTags'],
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
             ],
             'validators' => [
-                ['name'    => 'StringLength','options' => [
+                ['name'    => StringLength::class,'options' => [
                     'encoding' => 'UTF-8',
                     'max'      => 255,
                 ]],
@@ -113,11 +118,11 @@ class Testimonial extends InputFilter
             'name' => 'sector',
             'required' => false,
             'filters' => [
-                ['name' => 'StringTrim'],
-                ['name' => 'StripTags'],
+                ['name' => StringTrim::class],
+                ['name' => StripTags::class],
             ],
             'validators' => [
-                ['name'    => 'StringLength','options' => [
+                ['name'    => StringLength::class,'options' => [
                     'encoding' => 'UTF-8',
                     'max'      => 255,
                 ]],
@@ -128,10 +133,10 @@ class Testimonial extends InputFilter
             'name' => 'text',
             'required'      => true,
             'filters'       => [
-                ['name' => 'StringTrim'],
+                ['name' => StringTrim::class],
             ],
             'validators'    => [
-                ['name' => 'StringLength', 'options' => [
+                ['name' => StringLength::class, 'options' => [
                     'encoding' => 'UTF-8',
                 ]],
             ],

@@ -1,5 +1,7 @@
 <?php
 
+use UthandoTestimonial\Controller\TestimonialController;
+
 return [
     'uthando_user' => [
         'acl' => [
@@ -8,7 +10,7 @@ return [
                     'privileges' => [
                         'allow' => [
                             'controllers' => [
-                                'UthandoTestimonial\Controller\Testimonial' => ['action' => ['view']],
+                                TestimonialController::class => ['action' => ['view']],
                             ],
                         ],
                     ],
@@ -17,14 +19,14 @@ return [
                     'privileges' => [
                         'allow' => [
                             'controllers' => [
-                                'UthandoTestimonial\Controller\Testimonial' => ['action' => 'all'],
+                                TestimonialController::class => ['action' => 'all'],
                             ],
                         ],
                     ],
                 ],
             ],
             'resources' => [
-                'UthandoTestimonial\Controller\Testimonial',
+                TestimonialController::class,
             ],
         ],
     ],

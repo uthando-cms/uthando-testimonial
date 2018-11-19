@@ -13,6 +13,8 @@ namespace UthandoTestimonial\Form;
 
 use TwbBundle\Form\View\Helper\TwbBundleForm;
 use Zend\Form\Element\Button;
+use Zend\Form\Element\Text;
+use Zend\Form\Element\Textarea;
 use Zend\Form\Form;
 
 /**
@@ -20,13 +22,13 @@ use Zend\Form\Form;
  *
  * @package UthandoTestimonial\Form
  */
-class Testimonial extends Form
+class TestimonialForm extends Form
 {
     public function init()
     {
         $this->add([
             'name' => 'name',
-            'type' => 'text',
+            'type' => Text::class,
             'options' => [
                 'label' => 'Name',
                 'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,
@@ -42,7 +44,7 @@ class Testimonial extends Form
 
         $this->add([
             'name' => 'image',
-            'type' => 'text',
+            'type' => Text::class,
             'options' => [
                 'label' => 'Image',
                 'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,
@@ -62,7 +64,7 @@ class Testimonial extends Form
 
         $this->add([
             'name' => 'location',
-            'type' => 'text',
+            'type' => Text::class,
             'options' => [
                 'label' => 'Location',
                 'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,
@@ -78,7 +80,7 @@ class Testimonial extends Form
 
         $this->add([
             'name' => 'company',
-            'type' => 'text',
+            'type' => Text::class,
             'options' => [
                 'label' => 'Company',
                 'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,
@@ -94,7 +96,7 @@ class Testimonial extends Form
 
         $this->add([
             'name' => 'website',
-            'type' => 'text',
+            'type' => Text::class,
             'options' => [
                 'label' => 'Website',
                 'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,
@@ -110,7 +112,7 @@ class Testimonial extends Form
 
         $this->add([
             'name' => 'sector',
-            'type' => 'text',
+            'type' => Text::class,
             'options' => [
                 'label' => 'Sector',
                 'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,
@@ -126,7 +128,7 @@ class Testimonial extends Form
 
         $this->add([
             'name' => 'text',
-            'type' => 'textarea',
+            'type' => Textarea::class,
             'options' => [
                 'label' => 'HTML',
                 'twb-layout' => TwbBundleForm::LAYOUT_HORIZONTAL,

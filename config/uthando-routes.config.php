@@ -1,5 +1,7 @@
 <?php
 
+use UthandoTestimonial\Controller\TestimonialController;
+
 return [
     'router' => [
         'routes' => [
@@ -14,7 +16,7 @@ return [
                             ],
                             'defaults' => [
                                 '__NAMESPACE__' => 'UthandoTestimonial\Controller',
-                                'controller'    => 'Testimonial',
+                                'controller'    => TestimonialController::class,
                                 'action'        => 'index',
                             ],
                         ],
